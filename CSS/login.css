@@ -1,0 +1,277 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #ef7326;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 20px 15px;
+}
+
+/* Logo */
+.logo {
+    width: 250px; /* tamanho do logo PRECISO MUDAR LEMBRA MENTE LEMBRA */
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+/* Navegação */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ /* Itens do menu */
+.menu li {
+    display: inline-block;
+    margin-left: 30px;
+}
+/* conexões do menu */
+.menu a {
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Rodapé */
+/* ===========================
+   RODAPÉ (CSS)
+   =========================== */
+
+/* --- Variáveis de cor: troque aqui para alterar as cores do footer facilmente --- */
+:root{
+    --cor-rodape: rgb(19, 18, 18);          /* fundo principal  */
+    --cor-rodape-inferior: black; /* faixa inferior */
+    --cor-texto: gray ;           /* texto */
+    --cor-hover: white;           /* hover / */
+    --cor-seta: rgb(37, 35, 35);            /* cor da seta SVG */
+    --cor-fundo-seta:  white;      /* fundo atrás da seta */
+  }
+  
+  
+  /* --- Reset básico --- */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  /* ===========================
+     ESTILO PADRÃO (DESKTOP)
+     - Layout para telas largas (PC) é o padrão
+     - 3 colunas lado a lado, SVG maior, paddings amplos
+     =========================== */
+  
+  /* Container principal do rodapé */
+  .rodape {
+    background: var(--cor-rodape);
+    color: var(--cor-texto);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  /* Seta SVG decorativa (atrás da seta fica --cor-fundo-seta) */
+  .seta-rodape {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: var(--cor-fundo-seta);
+  }
+  .seta-rodape .svg-seta {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px; /* maior no desktop */
+  }
+  .seta-rodape .shape-fill {
+    fill: var(--cor-seta);
+  }
+  
+  /* Conteúdo do rodapé: layout em 3 colunas (desktop) */
+  .conteudo-rodape{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  /* Cada coluna ocupa cerca de 30% no desktop */
+  .coluna-rodape {
+    width: 30%;
+    margin-right: 3.333%;  /* espaçamento entre colunas */
+  }
+  .coluna-rodape:nth-of-type(3) { margin-right: 0; } /* última coluna sem margem */
+  
+  /* Título das colunas */
+  .titulo-rodape {
+    font-size: 1.25rem;
+    color: var(--cor-texto);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  
+  /* Listas e links */
+  .lista-rodape {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin-top: 0.8rem;
+  }
+  .lista-rodape li { padding: 0.25rem 0; }
+  .lista-rodape a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: color .2s;
+  }
+  .lista-rodape a:hover { color: var(--cor-hover); }
+  
+  /* Textos simples do rodapé (contato etc) */
+  
+  
+  .rede-social {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre o ícone e o texto */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    margin-bottom: 10px;
+    transition: 0.2s;
+  }
+  
+  .rede-social:hover {
+    color: white;
+    transform: translateX(4px); /* leve movimento ao passar o mouse */
+  }
+  
+  .icone-rede {
+    width: 20px;   /* tamanho padrão dos ícones */
+    height: 20px;
+    object-fit: contain; /* mantém proporção sem distorcer */
+    filter: brightness(0) invert(1); /* deixa branco (útil se for ícone escuro) */
+    transition: 0.2s;
+  }
+  
+  .rede-social:hover .icone-rede {
+    filter: brightness(1) invert(0) sepia(1) saturate(10000%) hue-rotate(50deg);
+  }
+  
+  
+  .texto-rodape {
+    color: var(--cor-texto);
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Links de redes sociais */
+  .rede-social {
+    display: block;
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-top: 0.6rem;
+    transition: color .2s;
+  }
+  .rede-social:hover { color: var(--cor-hover); }
+  
+  /* Faixa inferior com créditos */
+  .rodape-copias {
+    background: var(--cor-rodape-inferior);
+    text-align: center;
+    padding: 1.2rem 1rem;
+  }
+  .rodape-copias-texto { color: var(--cor-texto); margin-bottom: 0.4rem; }
+  .rodape-copias-by a { color: var(--cor-texto); font-weight: 600; text-decoration: none; }
+  .rodape-copias-by a:hover { color: var(--cor-hover); text-decoration: underline; }
+  
+  .rodape-copias-by img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  
+  

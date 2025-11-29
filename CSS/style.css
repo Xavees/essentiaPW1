@@ -1,0 +1,878 @@
+/* Fonte e fundo base */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #ef7326;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 20px 15px;
+}
+
+/* Logo */
+.logo {
+    width: 250px; /* tamanho do logo PRECISO MUDAR LEMBRA MENTE LEMBRA */
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+/* Navegação */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ /* Itens do menu */
+.menu li {
+    display: inline-block;
+    margin-left: 30px;
+}
+/* conexões do menu */
+.menu a {
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: black;
+    text-decoration: underline;
+}
+/* Fim Cabeçalho  */
+
+/* Inicio  Conteúdo principal  */
+
+/* ======== Seção Objetivo ======== */
+
+
+.quemSomos {
+  padding: 0;
+  margin: 0;
+}
+
+.quemSomos-conteudo {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+   background: linear-gradient(to top , #ef7326, white);
+}
+
+/* Texto */
+.quemSomos-texto {
+  flex: 1;
+  max-width: 50%;
+  padding: 60px 0 60px 80px;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Playfair Display", "Merriweather", serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+#text1 {
+  font-family: "Lora", "Georgia", serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333333;
+  max-width: 640px;
+ 
+}
+
+/* Imagem */
+.quemSomos-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 0;
+  border-radius: 0;
+  overflow: hidden;
+  max-width: 50%;
+}
+
+.quemSomos-imagem img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 0;
+  object-fit: cover;
+  margin: 0;
+}
+
+.MVV {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.Secoes-MVV {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 18px 32px 18px;
+}
+
+.card-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 18px;
+  background: #eee;
+}
+
+.card-titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 12px 0 10px 0;
+  text-align: center;
+}
+
+.card-texto {
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+/* Sobre a fundadora */
+
+/* variáveis para ajustar rápido */
+:root{
+  --card-width: 1100px;   /* largura do bloco central */
+  --card-padding: 36px;
+  --accent: #ef7326;      /* laranja da marca */
+  --polaroid-w: 260px;    /* largura da "polaroid" - mude aqui para redimensionar */
+  --polaroid-h: 260px;    /* altura da foto dentro da polaroid */
+  --polaroid-rotate: -12deg; /* ângulo da polaroid */
+}
+
+/* container geral centralizado */
+.sobre-fundadora {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* o cartão branco com cantos e borda fina */
+.card-sobre {
+  width: min(var(--card-width), 100%);
+  background: #fff;
+  border: 1px solid rgba(239,115,38,0.25);
+  border-radius: 12px;
+  padding: var(--card-padding);
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  position: relative; /* para os elementos decorativos */
+  z-index: 0; /* cria contexto de empilhamento para permitir pseudo-elements atrás */
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+}
+
+/* formas decorativas laranja (cantos) - usam pseudo-elementos */
+.card-sobre::before,
+.card-sobre::after {
+  content: "";
+  position: absolute;
+  background: var(--accent);
+  width: 280px;
+  height: 280px;
+  border-radius: 50% 50% 0 50%;
+  opacity: 0.95;
+  transform: rotate(-20deg);
+  pointer-events: none;
+  z-index: -1; /* garante que as formas fiquem atrás do conteúdo */
+}
+
+/* canto superior esquerdo */
+.card-sobre::before {
+  top: -90px;
+  left: -80px;
+}
+
+/* canto inferior direito (uma variação no formato) */
+.card-sobre::after {
+  bottom: -90px;
+  right: -80px;
+  transform: rotate(40deg) scaleX(1.1);
+  border-radius: 50% 0 50% 50%;
+}
+
+/* polaroid: quadro branco inclinado com sombra */
+.polaroid{
+  width: var(--polaroid-w);
+  flex: 0 0 var(--polaroid-w); /* fixa largura do bloco */
+  display: block;
+  background: #fff;
+  padding: 12px 12px 22px 12px; /* espaço maior embaixo (efeito polaroid) */
+  transform: rotate(var(--polaroid-rotate));
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.06);
+  margin-left: 6px; /* ajuste fino para afastar do limite */
+}
+
+/* imagem dentro da polaroid */
+.polaroid img {
+  width: 100%;
+  height: var(--polaroid-h);
+  object-fit: cover; /* mantém corte consistente */
+  display: block;
+  border-radius: 2px;
+}
+
+/* texto ao lado */
+.texto-sobre {
+  flex: 1; /* ocupa o resto do espaço */
+  color: black;
+  font-style: bolder;
+  position: relative;
+  z-index: 1; /* garante que o texto fique acima das formas decorativas */
+}
+
+/* título com estilo elegante */
+.texto-sobre h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--accent);
+  font-size: 40px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+/* parágrafos justificados e com boa leitura */
+.texto-sobre p {
+  font-family: "Lora", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin: 12px 0;
+  text-align: justify;
+}
+
+/* Objetivos da Empresa */
+
+
+/* ---------- Founder Hero (layout imagem + texto) ---------- */
+.founder-hero {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.founder-hero__image {
+  flex: 0 0 68%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+}
+.founder-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.founder-hero__content {
+  flex: 0 0 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+.founder-title { margin: 0; padding: 0; font-family: "Playfair Display", serif; color: #111; font-weight: 400; font-style: italic; letter-spacing: 1px; line-height: 0.95; }
+.founder-title span { display: block; font-size: 56px; text-transform: uppercase; }
+.founder-lead { margin: 0; font-family: "Lora", serif; color: #333; font-size: 16px; line-height: 1.8; text-align: justify; }
+.founder-cta { display: inline-block; padding: 10px 18px; background: #111; color: #fff; text-decoration: none; font-weight: 700; border-radius: 4px; margin-top: 8px; letter-spacing: .6px; }
+.founder-title span:last-child { font-size: 42px; }
+
+
+
+/* Parte Sobre os Objetivos da empresa  */
+
+/* ---------- Founder Hero (layout imagem + texto) ---------- */
+.founder-hero {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* imagem grande à esquerda */
+.founder-hero__image {
+  flex: 0 0 68%;                 /* controla % ocupado pela imagem */
+  height: 520px;                 /* altura fixa no desktop */
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+}
+.founder-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* recorta mantendo proporção */
+  display: block;
+}
+
+/* coluna direita de texto */
+.founder-hero__content {
+  flex: 0 0 32%;                 /* coluna direita estreita */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+/* título com cada palavra em linha separada */
+.founder-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  color: #111;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 0.95;
+}
+.founder-title span {
+  display: block;                /* força quebra por linha */
+  font-size: 56px;               /* ajuste para ficar grande como no exemplo */
+  text-transform: uppercase;
+}
+
+/* texto explicativo */
+.founder-lead {
+  margin: 0;
+  font-family: "Lora", serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* botão/CTA */
+.founder-cta {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 8px;
+  letter-spacing: .6px;
+}
+
+/* ajustes finos - deixar título mais compacto se for muito longo */
+.founder-title span:last-child {
+  font-size: 42px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fim Conteúdo principal  */
+
+/* Rodapé */
+/* ===========================
+   RODAPÉ (CSS) - padrão Desktop primeiro, depois Mobile
+   Comentários em português explicam cada bloco
+   =========================== */
+
+/* --- Variáveis de cor: troque aqui para alterar as cores do footer facilmente --- */
+:root{
+  --cor-rodape: rgb(19, 18, 18);          /* fundo principal  */
+  --cor-rodape-inferior: black; /* faixa inferior */
+  --cor-texto: gray ;           /* texto */
+  --cor-hover: white;           /* hover / */
+  --cor-seta: rgb(37, 35, 35);            /* cor da seta SVG */
+  --cor-fundo-seta:  white;      /* fundo atrás da seta */
+}
+
+
+/* --- Reset básico --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===========================
+   ESTILO PADRÃO (DESKTOP)
+   - Layout para telas largas (PC) é o padrão
+   - 3 colunas lado a lado, SVG maior, paddings amplos
+   =========================== */
+
+/* Container principal do rodapé */
+.rodape {
+  background: var(--cor-rodape);
+  color: var(--cor-texto);
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Seta SVG decorativa (atrás da seta fica --cor-fundo-seta) */
+.seta-rodape {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background: var(--cor-fundo-seta);
+}
+.seta-rodape .svg-seta {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px; /* maior no desktop */
+}
+.seta-rodape .shape-fill {
+  fill: var(--cor-seta);
+}
+
+/* Conteúdo do rodapé: layout em 3 colunas (desktop) */
+.conteudo-rodape{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Cada coluna ocupa cerca de 30% no desktop */
+.coluna-rodape {
+  width: 30%;
+  margin-right: 3.333%;  /* espaçamento entre colunas */
+}
+.coluna-rodape:nth-of-type(3) { margin-right: 0; } /* última coluna sem margem */
+
+/* Título das colunas */
+.titulo-rodape {
+  font-size: 1.25rem;
+  color: var(--cor-texto);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Listas e links */
+.lista-rodape {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-top: 0.8rem;
+}
+.lista-rodape li { padding: 0.25rem 0; }
+.lista-rodape a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  transition: color .2s;
+}
+.lista-rodape a:hover { color: var(--cor-hover); }
+
+/* Textos simples do rodapé (contato etc) */
+
+
+.rede-social {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre o ícone e o texto */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.rede-social:hover {
+  color: white;
+  transform: translateX(4px); /* leve movimento ao passar o mouse */
+}
+
+.icone-rede {
+  width: 20px;   /* tamanho padrão dos ícones */
+  height: 20px;
+  object-fit: contain; /* mantém proporção sem distorcer */
+  filter: brightness(0) invert(1); /* deixa branco (útil se for ícone escuro) */
+  transition: 0.2s;
+}
+
+.rede-social:hover .icone-rede {
+  filter: brightness(1) invert(0) sepia(1) saturate(10000%) hue-rotate(50deg);
+}
+
+
+.texto-rodape {
+  color: var(--cor-texto);
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Links de redes sociais */
+.rede-social {
+  display: block;
+  color: var(--cor-texto);
+  text-decoration: none;
+  margin-top: 0.6rem;
+  transition: color .2s;
+}
+.rede-social:hover { color: var(--cor-hover); }
+
+/* Faixa inferior com créditos */
+.rodape-copias {
+  background: var(--cor-rodape-inferior);
+  text-align: center;
+  padding: 1.2rem 1rem;
+}
+.rodape-copias-texto { color: var(--cor-texto); margin-bottom: 0.4rem; }
+.rodape-copias-by a { color: var(--cor-texto); font-weight: 600; text-decoration: none; }
+.rodape-copias-by a:hover { color: var(--cor-hover); text-decoration: underline; }
+
+.rodape-copias-by img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+
+/* ===========================
+   ESTILO MOBILE (A PARTIR DESTE BLOCO)
+   - Aqui vem as regras específicas para telas pequenas
+   - Usamos a abordagem desktop-first, por isso o mobile fica em @media (max-width)
+   =========================== */
+
+/* ==========================================================
+   ===== RESPONSIVIDADE (CELULAR) =====
+   ========================================================== */
+
+@media screen and (max-width: 900px) {
+  /* ===== FOOTER ===== */
+  .seta-rodape .svg-seta {
+    height: 30px;
+  }
+
+  .conteudo-rodape {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .coluna-rodape {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .titulo-rodape {
+    font-size: 1.1rem;
+  }
+
+  .lista-rodape, .texto-rodape, .rede-social {
+    font-size: 0.95rem;
+  }
+
+  .rodape-copias {
+    padding: 1rem 0.8rem;
+  }
+
+  .rodape-copias-texto {
+    font-size: 0.85rem;
+  }
+
+  /* ===== HEADER ===== */
+  .cabecalho {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 10px;
+      text-align: center;
+  }
+
+  .logo {
+      width: 250px;
+      margin-bottom: 10px;
+  }
+
+  .menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .menu li {
+      margin-left: 0;
+  }
+
+  .menu a {
+      font-size: 18px;
+  }
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+
+.objetivo {
+    padding: 30px 20px;
+  }
+
+  .objetivo-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #text1 {
+    font-size: 16px;
+  }
+
+  .objetivo-imagem img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+
+
+
+
+
+/* Sobre a fundadora  */
+  .card-sobre {
+    flex-direction: column;
+    align-items: center;
+    padding: 28px;
+  }
+  .polaroid {
+    transform: rotate(0);
+    margin: 0 0 18px 0;
+  }
+  .polaroid img { height: 300px; } /* escolhe uma altura adequada ao celular */
+  .texto-sobre h2 { text-align: center; font-size: 28px; }
+  .texto-sobre p { text-align: left; }
+}
+
+
+
+
+
+/* Seção ODS - Sustentabilidade */
+
+
+.sustMarca {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.ods-title {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.ods-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Força 4 colunas no desktop para manter os 4 cards em uma linha */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 15px;
+  /* garante que cada célula do grid ocupe a mesma altura disponível */
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
+.ods-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  /* transforma o card em flex para que possamos distribuir título/texto e forçar mesma altura */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ods-card:hover {
+  transform: translateY(-5px);
+}
+
+.ods-image {
+  width: 100%;
+  /* altura fixa da imagem dentro do card; como o card é flex column, a imagem não estica o conteúdo do texto */
+  flex: 0 0 220px;
+  overflow: hidden;
+}
+
+.ods-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.ods-card:hover .ods-image img {
+  transform: scale(1.05);
+}
+
+.ods-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #333;
+  padding: 20px 20px 10px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.ods-card p {
+  padding: 0 20px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  /* permite que o parágrafo ocupe o espaço restante e alinhe a base dos cards */
+  flex: 1 1 auto;
+}
+
+/* Cores específicas para cada ODS */
+.ods-5 { background: #FF3A21; }
+.ods-8 { background: #A21942; }
+.ods-9 { background: #FD6925; }
+.ods-12 { background: #BF8B2E; }
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ods-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .ods-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .sustMarca {
+        padding: 40px 15px;
+    }
+    
+    .ods-card h3 {
+        font-size: 16px;
+    }
+    
+    .ods-card p {
+        font-size: 13px;
+    }
+}
+
+/* Objetivos */
+
+
+  .founder-hero {
+    flex-direction: column;
+    gap: 18px;
+    margin: 24px auto;
+  }
+  .founder-hero__image {
+    width: 100%;
+    flex: 0 0 auto;
+    height: 360px;
+    border-radius: 6px;
+  }
+  .founder-hero__content {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  .founder-title span {
+    font-size: 36px;
+    line-height: 1;
+  }
+  .founder-title span:last-child { font-size: 30px; }
+  .founder-lead { font-size: 15px; line-height: 1.6; text-align: left; }
+
+
+  .founder-hero { flex-direction: column; gap: 18px; margin: 24px auto; }
+  .founder-hero__image { width: 100%; flex: 0 0 auto; height: 360px; border-radius: 6px; }
+  .founder-hero__content { width: 100%; flex: 0 0 auto; }
+  .founder-title span { font-size: 36px; line-height: 1; }
+  .founder-title span:last-child { font-size: 30px; }
+  .founder-lead { font-size: 15px; line-height: 1.6; text-align: left; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FIM CONTEÚDO PRINCIPAL ===== */
